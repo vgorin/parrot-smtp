@@ -1,4 +1,4 @@
-#![ParrotSMTP Logo](https://raw.githubusercontent.com/vgorin/parrot-smtp/master/src/main/webapp/logo1_p_64.png)
+#![ParrotSMTP Logo](https://github.com/vgorin/parrot-smtp/raw/master/src/main/webapp/parrot-smtp_logo1.gif)
 
 **ParrotSMTP** is a tiny SMTP service which accepts and stores any email sent to existing/non-existing recipient within [parrotsmtp.com](http://parrotsmtp.com) domain. Use [Burn After Reading](http://parrotsmtp.com/bar_client.shtml) client to read it.
 
