@@ -8,4 +8,4 @@ The project demonstrates the use of few simple but functional technologies:
 * Old, good, but nowadays forgotten [Server Side Includes (SSI)](https://en.wikipedia.org/wiki/Server_Side_Includes). Take a look at *.shtml and *.txt files [here](https://github.com/vgorin/parrot-smtp/tree/master/src/main/webapp).
 * The simplest [LRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU) map [implementation](https://github.com/vgorin/parrot-smtp/blob/master/src/main/java/com/parrotsmtp/util/LRUMap.java).
 
-ParrotSTMP logo design by [Tatyana Boyko](https://www.linkedin.com/in/tboyko).
+ParrotSTMP logo designed by [Tatyana Boyko](https://www.linkedin.com/in/tboyko).
