@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ParrotSMTP</title>
+<!--#include file="parrotsmtp_header.txt" -->
+</head>
+<body>
+<!--#include file="parrotsmtp_pgheader.txt" -->
+		<h1>ParrotSMTP<sup>Alpha</sup></h1>
+		<p><b>ParrotSMTP</b> is a tiny SMTP service which accepts and stores any email sent to existing/non-existing recipient within &quot;${parrotsmtp-domain}&quot; domain. It doesn't check sender or recipient address, or anything else.</p>
+		<p>You can use <a href="bar_client.shtml">Burn After Reading</a> client to retrieve stored email. It will be deleted immediately after retrieval.</p>
+		<h2>Core Features</h2>
+		<ul>
+			<li>Accepts arbitrary messages via SMTP protocol on port 25. Maximum data size accepted for one SMTP connection is limited to 100Kb. Please do not use service for &quot;heavy&quot; messages. It is recommended to use service for short text messages.</li>
+			<li>Number of messages stored in the system is limited. The service deletes old messages automatically. Please retrieve your message shortly after it arrives into the system or it may be deleted by the system before you get it.</li>
+			<li>Read access to messages stored in the system is provided by <a href="bar_client.shtml">Burn After Reading</a> client.</li>
+		</ul>
+<!--#include file="parrotsmtp_pgfooter.txt" -->
+</body>
+<script type="text/javascript">
+var header_cell_right = document.getElementById("header_cell_right");
+header_cell_right.style.verticalAlign = "top";
+header_cell_right.innerHTML = '[<a href="admin.shtml">admin page</a>]';
+</script>
+</html>

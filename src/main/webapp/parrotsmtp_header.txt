@@ -1,0 +1,2 @@
+	<link type="text/css" rel="stylesheet" href="parrot-smtp.css"/>
+	<link rel="icon" type="image/png" href="logo1_p_64.png"/>

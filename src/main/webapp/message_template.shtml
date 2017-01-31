@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>{0}</title>
+<!--#include file="parrotsmtp_header.txt" -->
+</head>
+<body>
+<!--#include file="parrotsmtp_pgheader.txt" -->
+		<table style="width: 100%;">
+			<tr><td colspan="2"><h1>{0}</h1></td></tr>
+			<tr><td><b>From: <u>{1}</u></b></td><td><b>Size: <u>{3}</u></b></td></tr>
+			<tr><td><b>To: <u>{2}</u></b></td><td><b>{4}</b></td></tr>
+			<tr><td colspan="2"></td></tr>
+			<tr><td colspan="2">
+				<table style="width: 100%;">
+					{5}
+				</table>
+			</td></tr>
+		</table>
+<!--#include file="parrotsmtp_pgfooter.txt" -->
+</body>
+</html>

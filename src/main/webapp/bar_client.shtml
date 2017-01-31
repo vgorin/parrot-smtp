@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Burn After Reading: ParrotSMTP Client</title>
+<!--#include file="parrotsmtp_header.txt" -->
+</head>
+<body>
+<!--#include file="parrotsmtp_pgheader.txt" -->
+<h1>Burn After Reading<sup>Beta</sup>: ParrotSMTP Client</h1>
+<form action="http://${parrotsmtp-domain}/bar" method="GET">
+	<input type="hidden" name="cmd" value="fetch_email">
+	<p><label for="recipient">Please enter email address of the recipient whose mail you want to <b>read</b> and <b>delete</b> from server:</label><br/>
+		<input id="recipient" name="recipient" type="email" value="noname@${parrotsmtp-domain}" size="60"></p>
+	<p>
+		<input id="as_eml" name="as_eml" value="true" type="checkbox" checked><label for="as_eml">Download message as <b>*.eml</b> file</label><br/>
+		<input id="as_zip" name="as_zip" value="true" type="checkbox" title="Not implemented yet" disabled><label for="as_zip">Download all messages for specified recipient as <b>*.zip</b> file</label>
+	</p>
+	<p><input type="submit" value="Read and burn!"></p>
+</form>
+<h2>Common Usage Scenarios</h2>
+<p>This section describes few common usage scenarios for ParrotSMTP in conjunction with Burn After Reading (BAR) client.</p>
+<h3>Scenario A: Anonymous Web Registration</h3>
+<p><b>Problem:</b> You want to register a temporary account on some web-site, but it requires you to enter a <b>valid</b> email address which will be used to send a verification code back to you to ensure that the email address you've provided is valid.<br/>
+	<span style="font-size: small;">For some reason you don't want to use your email address (perhaps, because you're afraid of spam) and you are too lazy to create a new one in gmail.com. You also <b>don't care</b> much about your <b>privacy</b> (if someone steals this account from you).</span></p>
+<p><b>Solution:</b> You submit a registration form using an arbitrary email, the only requirement is that it must have <b>${parrotsmtp-domain}</b> as a <a href="http://en.wikipedia.org/wiki/Email_address#Domain_part">domain part</a>, for example you may use something like <i>abrakadabra@${parrotsmtp-domain}</i>. Then you obtain your email using the <label for="recipient" style="font-weight: bold; cursor: pointer;">form</label> on the top of the page. Your email will be deleted from the server immediately after you get it.</p>
+<h3>Scenario B: Underground Mailbox</h3>
+<p><b>Problem:</b> You need to leave a message to your friend. You don't trust anyone.</p>
+<p><b>Solution:</b> You connect to <b>${parrotsmtp-domain}</b> on port <b>25</b> and leave a message. You communicate using SMTP. Your friend reads a message using BAR client. Here is an example of leaving a message using telnet (John leaves a message for Carol):</p>
+<pre class="console">
+C:\>telnet ${parrotsmtp-domain} 25
+Connecting To ${parrotsmtp-domain}...
+
+
+220 ParrotSMTP at your service
+HELO John
+250 OK
+MAIL From John
+250 OK
+RCPT To Carol
+250 OK
+DATA
+354 Start mail input; end with &lt;CRLF&gt;.&lt;CRLF&gt;
+Oh my God, Carol, they found me. I don't know how, but they found me!
+They're breathing down my neck.
+Contact me asap!
+
+John
+.
+250 OK
+QUIT
+221 Service closing transmission channel
+
+
+Connection to host lost.
+
+
+
+</pre>
+<h2>FAQ</h2>
+<b>Q:</b> Is it secure?<br/>
+<b>A:</b> No, <b>it is not</b>:
+<ol>
+	<li>No SSL support yet.</li>
+	<li>
+		ParrotSMTP in conjunction with BAR client has a very <i>specific</i> security. An attacker can access a recipient's message if and only if he <b>knows</b> the recipient's name and until the message <b>exists</b> in the system.<br/>
+		<span style="font-size: small;">That is, if you are using a &quot;hard-to-predict&quot; recipient's name (<a href="http://en.wikipedia.org/wiki/Email_address#Local_part">local part</a> of the email address) then it is unlikely that an attacker can guess it and obtain your message; if you've already obtained it through the BAR client then this message no longer exists in the system and an attacker can't get it even if he knows recipient's name.</span>
+	</li>
+</ol>
+<!--#include file="parrotsmtp_pgfooter.txt" -->
+</body>
+</html>

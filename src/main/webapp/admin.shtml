@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>ParrotSMTP Admin</title>
+<!--#include file="parrotsmtp_header.txt" -->
+</head>
+<body>
+<!--#include file="parrotsmtp_pgheader.txt" -->
+		<h1>ParrotSMTP Admin Page</h1>
+		<form action="http://${parrotsmtp-domain}/service" method="GET">
+			<table>
+				<tr>
+					<td><label for="cmd">Action:</label></td>
+					<td>
+						<select id="cmd" name="cmd">
+							<option value="service_stats">get service status</option>
+							<option value="service_start">start service</option>
+							<option value="service_stop">stop service</option>
+							<option value="clear_pool">clear message pool</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="admin_pwd">Password:</label></td>
+					<td><input id="admin_pwd" name="admin_pwd" type="password" value=""></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</form>
+<!--#include file="parrotsmtp_pgfooter.txt" -->
+</body>
+</html>

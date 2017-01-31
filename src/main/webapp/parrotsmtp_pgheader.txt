@@ -1,0 +1,8 @@
+<table style="width: 720px;">
+	<tr><td>
+		<table style="width: 100%;">
+			<tr><td><a href="http://${parrotsmtp-domain}/"><img width="200" height="60" src="parrot-smtp_logo1.gif" alt="ParrotSMTP Logo" style="border: none;"></a></td><td style="text-align: right;" id="header_cell_right"></td></tr>
+		</table>
+	</td></tr>
+	<tr><td><hr/></td></tr>
+	<tr><td>

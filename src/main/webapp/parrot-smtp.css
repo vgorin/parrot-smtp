@@ -1,0 +1,47 @@
+@font-face {
+	font-family: century_gothic;
+	src: url('GOTHIC.TTF');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: century_gothic;
+	src: url('GOTHICB.TTF');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: century_gothic;
+	src: url('GOTHICI.TTF');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: century_gothic;
+	src: url('GOTHICBI.TTF');
+	font-weight: bold;
+	font-style: italic;
+}
+
+body, input, select {
+	font-family: Century Gothic, century_gothic, serif;
+}
+
+p {
+	text-align: justify;
+}
+
+pre.console {
+	/*white-space: pre;*/
+	color: lightgray;
+	background-color: black;
+	padding: 1px 0;
+	font-weight: bold;
+	width: 660px;
+	height: 339px;
+	overflow: scroll;
+	border: 6px ridge;
+}
