@@ -1,9 +1,7 @@
 </td></tr>
 <tr><td style="padding-top: 24pt;">
 	<fieldset style="border: 1px solid black;"><legend>Copyright Notice</legend>
-		<!--Copyright &copy; 2011-2012 Paradox. All rights reserved.<br/>-->
-		Copyright &copy; 2011-2012 BassejnayaWorks. All rights reserved.<br/>
-		<!--Copyright &copy; 2011-2012 theteam. All rights reserved.-->
+		Copyright &copy; 2011-2020 BassejnayaWorks. All rights reserved.<br/>
 	</fieldset>
 </td></tr>
 </table>
