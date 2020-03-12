@@ -11,7 +11,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<parrotsmtp-domain>parrotsmtp.com</parrotsmtp-domain>
+		<parrotsmtp-domain>parrotsmtp.online</parrotsmtp-domain>
 	</properties>
 
 	<dependencies>
